@@ -29,38 +29,31 @@ A Simple business card might not have all the information related to you, but in
 12. Now, we go back to Vuforia and select the “Target Manager” tab. We click on “Add Database”. We give it a name and check Type “ Device” then click “create”.
 13. Now that we have created a database, we have to add targets. We click on it and then select “Add Target”.
 14. We then Select Type “Single Image”. We browse to “AR Business card.jpg”. Then we say the width is “1” and select “Add”.
-15. Then we add our 2nd Target following the same steps but choosing “Untitled.jpg” instead.
-16. Then we add our 3rd Target by Selecting Type “3D Object” and browsing to “7gc.od” and then clicking “Add”.
-17. Now that we have our database with our targets, we select “Download Database All” and then check “Unity Editor”. Then select “Download”.
-18. We open the file we just downloaded and select “Import”.
+15. Now that we have our database with our targets, we select “Download Database All” and then check “Unity Editor”. Then select “Download”.
+16. We open the file we just downloaded and select “Import”.
 
 
 
 ## AR BUSINESS CARD DESIGN:  
 Our AR business card would be designed in such a way that proper solid shapes and colors are used to make the image recognition possible. 
 ## AR DEVELOPMENT:
-1. Under “AR Camera”, we create an “Image Target”.
-2. We go to image Target and select the previously created database and “AR business card” as Target
-3. Then we add 3D Object  Cylinder and scale it as x=1 and z=0.7.
-4. Now we go to Business Card Folder and select a photo and drop it in the cylinder
-5. Then we copy-paste five cylinders and paste their pictures inside.
-6. Now we add 3D Object  Quad and then rotate it 90 degrees in the x-axis direction.
-7. We then select the user avatar and drop it in the quad
-8. Then we add 3D Object Text (Text Mesh Pro)
-9. We go to Window  Text Mesh Pro and Import both “TMP Essential Resources” & “TMP Examples and Extras”.
-10. We select Font size as “1.5” and Fill in User Details such as “Name” and “Address”
-11. Now we go to the “Assets” folder and create a folder named “Scripts”. Then inside the folder, we create a “C# Script” and rename it according to what we want. For Example “LinkedIn”.
-12. Then we open the script and delete methods “Start()” and “Update()”
-13. Now, we add the method “OnMouseDown()” and add the line “Application.OpenURL();” where we paste the link of the wanted social media platform between the ().
-14. Then we pick the script and drop it in “Add Component” for that object.
-15. We repeat the same steps above for the rest of the social media links.
+1.Under “AR Camera”, we create an “Image Target”.
+2.We go to image Target and select the previously created database and “AR business card” as Target
+3.Now we have to add 6 buttons for youtube, instagram, facebook, website, mobile number, gmail.
+4.We have to change the source image of buttons and change the size of buttons accordingly.
+5.We will create an empty game object and rename it as codes to add C# codes.
+6.We open the script and delete "start()" and "update".
+7.Now,we add the method "buttonfunction()" and add the line  “Application.OpenURL();” where we paste the link of the wanted social media platform between the ().
+8.Then we pick the script and drop it in “Add Component” for that object.
+9.We repeat the same steps above for the rest of the social media links.
+The code for adding urls is present in the file codes above.
+
  
 ## IMAGE RECOGNITION USING VUFORIA:
-Vuforia supports 2D as well as 3D object recognition. The required target will be scanned using the Object Scanner app provided by the Vuforia engine for Android. We need to add this target to the Targets database online, similar to how we added the image targets.
-1. We select AR Camera ->Vuforia Engine ->3D Scan.
-2. We make sure that the Target is 66.od.
-3. Then, we include the controls from the business card under ObjectTarget.
-4. Set the position of the objects to 0 so that they would be close to the object target. And adjust the placement according to the requirement.
+Vuforia supports 2D as well as 3D object recognition.
+1.By Adjusting the position of AR Camera we can set the image target .
+2.Now we have to add camera focus controller code in ar camera game object.
+The code for image recognition is present in the file codes above.
 
 ## EXPORT INTO MOBILE APP:
 1. We go to file  Build Settings
@@ -74,7 +67,7 @@ Apart from the A.R. business card, Auguemented reality concept can be used in ot
 2. To showcase movie trailers and clips 
 3. Can be modified into a Greeting card and postcard. Inclusion of pictures, popups, animations would help.
 ## WORK DONE SO FAR:
-We have installed the unity hub and downloaded all the required packages like Vuforia engine, unity package,  AR foundation …. 
-Since one of our team mates tested positive for covid-19 ,we couldn’t start the design work yet .But we make sure that we will complete the project in time .
+We have added the buttons and the codes required for it.Only Exporting to mobile app is left.
 ## ISSUES FACED:
-Initially we had a error while installing unity engine 2020 version as it didn’t have in built vuforia engine .So we are using the 2019 version for convenience
+Initially we had a error while installing unity engine 2020 version as it didn’t have in built vuforia engine .So we are using the 2019 version for convenience.
+And while exporting to mobile app there are few errors which we are trying to solve.
