@@ -38,20 +38,19 @@ A Simple business card might not have all the information related to you, but in
 Our AR business card would be designed in such a way that proper solid shapes and colors are used to make the image recognition possible. 
 ## AR DEVELOPMENT:
 1.Under “AR Camera”, we create an “Image Target”.
-2.We go to image Target and select the previously created database and “AR business card” as Target
-3.Now we have to add 6 buttons for youtube, instagram, facebook, website, mobile number, gmail.
+2.We go to image Target and select the previously created database and “AR business card” as Target.
+3.Now we have to add the buttons required .In this case ,we have added Instagram,Youtube,Gmail,Facebook,Phone Number,Website buttons.
 4.We have to change the source image of buttons and change the size of buttons accordingly.
 5.We will create an empty game object and rename it as codes to add C# codes.
-6.We open the script and delete "start()" and "update".
-7.Now,we add the method "buttonfunction()" and add the line  “Application.OpenURL();” where we paste the link of the wanted social media platform between the ().
-8.Then we pick the script and drop it in “Add Component” for that object.
+6.We open the script and delete "start()" and "update()".
+7.Now,we add the method "buttonfunction()" and add the line  “Application.OpenURL();”
+8.Then we pick the script and drop it in “Button”for that object and add the required link by selecting button3d.buttonfunction .
 9.We repeat the same steps above for the rest of the social media links.
-The code for adding urls is present in the file codes above.
+All the pngs used and code for adding urls are present in the files above.
 
- 
 ## IMAGE RECOGNITION USING VUFORIA:
 Vuforia supports 2D as well as 3D object recognition.
-1.By Adjusting the position of AR Camera we can set the image target .
+1.By Adjusting the position of AR Camera we can set the image target.
 2.Now we have to add camera focus controller code in ar camera game object.
 The code for image recognition is present in the file codes above.
 
